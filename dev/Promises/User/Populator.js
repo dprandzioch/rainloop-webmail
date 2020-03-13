@@ -93,9 +93,7 @@ class PromisesUserPopulator extends AbstractBasicPromises {
 						);
 					} else {
 						// If there are already subfolders cached but none are provided, remove existing cache entries
-						oCacheFolder.subFolders(
-							this.folderResponseParseRec(sNamespace, [], expandedFolders)
-						);
+						oCacheFolder.subFolders(this.folderResponseParseRec(sNamespace, [], expandedFolders));
 					}
 
 					aList.push(oCacheFolder);

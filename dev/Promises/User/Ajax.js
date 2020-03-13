@@ -40,7 +40,7 @@ class UserAjaxUserPromises extends AbstractAjaxPromises {
 			'Folder': sNewFolderName,
 			'Parent': sParentName
 		});
-  }
+	}
 
 	folderMove(sOldPath, sNewPath, fTrigger) {
 		return this.postRequest('FolderMove', fTrigger, {

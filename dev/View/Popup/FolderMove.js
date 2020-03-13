@@ -41,8 +41,6 @@ class FolderMoveView extends AbstractViewNext {
 			return folderListOptionsBuilder([], list, [], top, null, fDisableCallback, null, fRenameCallback);
 		});
 
-		console.log(this.parentFolderSelectList());
-
 		this.defautOptionsAfterRender = defautOptionsAfterRender;
 	}
 
