@@ -513,6 +513,7 @@ export const Notification = {
 	'CantSubscribeFolder': 403,
 	'CantUnsubscribeFolder': 404,
 	'CantDeleteNonEmptyFolder': 405,
+	'CantMoveFolder': 406,
 
 	'CantSaveSettings': 501,
 	'CantSavePluginSettings': 502,

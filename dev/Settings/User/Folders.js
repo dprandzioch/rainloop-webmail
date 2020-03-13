@@ -128,6 +128,10 @@ class FoldersUserSettings {
 		}
 	}
 
+	moveFolder(folder) {
+		showScreenPopup(require('View/Popup/FolderMove'), [folder]);
+	}
+
 	subscribeFolder(folder) {
 		Local.set(ClientSideKeyName.FoldersLashHash, '');
 		Remote.folderSetSubscribe(noop, folder.fullNameRaw, true);

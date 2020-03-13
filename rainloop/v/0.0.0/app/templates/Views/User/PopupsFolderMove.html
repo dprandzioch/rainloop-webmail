@@ -1,0 +1,32 @@
+<div class="popups">
+	<div class="modal hide b-folder-move-content g-ui-user-select-none" data-bind="modal: modalVisibility">
+		<div>
+			<div class="modal-header">
+				<button type="button" class="close" data-bind="command: cancelCommand">&times;</button>
+				<h3>
+					<span class="i18n" data-i18n="POPUPS_MOVE_FOLDER/TITLE_MOVE_FOLDER"></span>
+				</h3>
+			</div>
+			<div class="modal-body">
+				<div class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label">
+							<span class="i18n" data-i18n="POPUPS_MOVE_FOLDER/LABEL_PARENT"></span>
+						</label>
+						<div class="controls">
+							<select data-bind="options: parentFolderSelectList, value: selectedParentValue,
+								optionsText: 'name', optionsValue: 'name', optionsAfterRender: defautOptionsAfterRender"></select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a class="btn buttonMove" data-bind="command: moveFolderCommand">
+					<i class="icon-list"></i>
+					&nbsp;&nbsp;
+					<span class="i18n" data-i18n="POPUPS_MOVE_FOLDER/BUTTON_MOVE"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

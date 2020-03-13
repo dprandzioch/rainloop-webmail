@@ -274,6 +274,13 @@ en:
     BUTTON_CANCEL: "Cancel"
     BUTTON_CLOSE: "Close"
     TITLE_CREATING_PROCESS: "Creating a folder"
+  POPUPS_MOVE_FOLDER:
+      TITLE_MOVE_FOLDER: "Move folder?"
+      LABEL_PARENT: "Parent folder"
+      BUTTON_MOVE: "Move"
+      BUTTON_CANCEL: "Cancel"
+      BUTTON_CLOSE: "Close"
+      TITLE_MOVING_PROCESS: "Moving folder"
   POPUPS_CLEAR_FOLDER:
     TITLE_CLEAR_FOLDER: "Purge all messages from the folder?"
     BUTTON_CLEAR: "Clear"

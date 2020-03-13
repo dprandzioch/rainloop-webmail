@@ -5534,6 +5534,38 @@ NewThemeLink IncludeCss LoadingDescriptionEsc TemplatesLink LangLink IncludeBack
 		return $this->TrueResponse(__FUNCTION__);
 	}
 
+
+	/**
+	 * @return array
+	 */
+	public function DoFolderMove()
+	{
+		$oAccount = $this->initMailClientConnection();
+
+		if (!$this->GetCapa(false, false, \RainLoop\Enumerations\Capa::FOLDERS, $oAccount))
+		{
+			return $this->FalseResponse(__FUNCTION__);
+		}
+
+		try
+		{
+			$sOldPath = $this->GetActionParam('Old', '');
+			$sNewPath = $this->GetActionParam('New', '');
+
+			$this->MailClient()->FolderMove(
+				$sOldPath,
+				$sNewPath,
+				!!$this->Config()->Get('labs', 'use_imap_list_subscribe', true)
+			);
+		}
+		catch (\Exception $oException)
+		{
+			throw new \RainLoop\Exceptions\ClientException(\RainLoop\Notifications::CantMoveFolder, $oException);
+		}
+
+		return $this->TrueResponse(__FUNCTION__);
+	}
+
 	/**
 	 * @return array
 	 */

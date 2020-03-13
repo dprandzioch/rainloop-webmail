@@ -46,6 +46,7 @@ class Notifications
 	const CantSubscribeFolder = 403;
 	const CantUnsubscribeFolder = 404;
 	const CantDeleteNonEmptyFolder = 405;
+	const CantMoveFolder = 406;
 
 	const CantSaveSettings = 501;
 	const CantSavePluginSettings = 502;
@@ -122,6 +123,7 @@ class Notifications
 			self::CantSubscribeFolder => 'CantSubscribeFolder',
 			self::CantUnsubscribeFolder => 'CantUnsubscribeFolder',
 			self::CantDeleteNonEmptyFolder => 'CantDeleteNonEmptyFolder',
+			self::CantMoveFolder => 'CantMoveFolder',
 			self::CantSaveSettings => 'CantSaveSettings',
 			self::CantSavePluginSettings => 'CantSavePluginSettings',
 			self::DomainAlreadyExists => 'DomainAlreadyExists',
