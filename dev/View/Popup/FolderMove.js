@@ -28,8 +28,7 @@ class FolderMoveView extends AbstractViewNext {
 		this.parentFolderSelectList = ko.computed(() => {
 			const top = [],
 				list = FolderStore.folderList(),
-				fRenameCallback = (oItem) =>
-					oItem ? (oItem.isSystemFolder() ? oItem.name() + ' ' + oItem.manageFolderSystemName() : oItem.name()) : '';
+				fRenameCallback = (oItem) => (oItem ? oItem.fullName : '');
 
 			top.push(['', '']);
 
@@ -46,7 +45,9 @@ class FolderMoveView extends AbstractViewNext {
 
 	@command()
 	moveFolderCommand() {
-		let sNewParentFolder = this.selectedParentValue();
+		// Remove nbsps from the selected folder. We use name instead of ID because for the new target folder,
+		// MailClient expects a fully formatted path name instead of the normalized one
+		let sNewParentFolder = this.selectedParentValue().replace(/\u00A0/g, '');
 		const oOriginalFolder = this.originalFolder();
 
 		if ('' !== sNewParentFolder) {
