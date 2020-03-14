@@ -272,6 +272,13 @@ de_DE:
     BUTTON_CANCEL: "Abbrechen"
     BUTTON_CLOSE: "Schließen"
     TITLE_CREATING_PROCESS: "Ordner wird angelegt"
+  POPUPS_MOVE_FOLDER:
+    TITLE_MOVE_FOLDER: "Ordner verschieben?"
+    LABEL_PARENT: "Übergeordneter Ordner"
+    BUTTON_MOVE: "Verschieben"
+    BUTTON_CANCEL: "Abbrechen"
+    BUTTON_CLOSE: "Schließen"
+    TITLE_MOVING_PROCESS: "Ordner wird verschoben"
   POPUPS_CLEAR_FOLDER:
     TITLE_CLEAR_FOLDER: "Alle Nachrichten in diesem Ordner löschen?"
     BUTTON_CLEAR: "Bereinigen"

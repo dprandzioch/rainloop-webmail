@@ -13,7 +13,7 @@
 		</a>
   	</td>
 	<td class="move-folder-parent">
-		<span class="move-folder" data-bind="visible: canBeDeleted() && !deleteAccess(), click: function (oFolder) { $root.moveFolder(oFolder); }">
+		<span class="move-folder" data-bind="visible: !isSystemFolder() && !deleteAccess(), click: function (oFolder) { $root.moveFolder(oFolder); }">
 			<i class="icon-list"></i>
 		</span>
 	</td>

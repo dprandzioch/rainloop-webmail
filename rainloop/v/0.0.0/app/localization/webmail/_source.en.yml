@@ -276,7 +276,7 @@ en:
     TITLE_CREATING_PROCESS: "Creating a folder"
   POPUPS_MOVE_FOLDER:
       TITLE_MOVE_FOLDER: "Move folder?"
-      LABEL_PARENT: "Parent folder"
+      LABEL_PARENT: "New parent folder"
       BUTTON_MOVE: "Move"
       BUTTON_CANCEL: "Cancel"
       BUTTON_CLOSE: "Close"
