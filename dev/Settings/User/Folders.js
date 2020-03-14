@@ -81,9 +81,16 @@ class FoldersUserSettings {
 			.on('mouseover', '.check-folder-parent', () => {
 				this.folderListHelp(i18n('SETTINGS_FOLDERS/HELP_CHECK_FOR_NEW_MESSAGES'));
 			})
-			.on('mouseout', '.subscribe-folder-parent, .check-folder-parent, .delete-folder-parent', () => {
-				this.folderListHelp('');
-			});
+			.on('mouseover', '.move-folder-parent', () => {
+				this.folderListHelp(i18n('SETTINGS_FOLDERS/HELP_MOVE_FOLDER'));
+			})
+			.on(
+				'mouseout',
+				'.subscribe-folder-parent, .check-folder-parent, .delete-folder-parent, .move-folder-parent',
+				() => {
+					this.folderListHelp('');
+				}
+			);
 	}
 
 	createFolder() {
